@@ -1,8 +1,140 @@
 @import url(https://fonts.googleapis.com/css?family=Raleway);
-body{
+
+body {
     font-family: helvetica, arial, sans-serif;
-	font-size:1em;
+    font-size: 1em;
+    background-color: #0D0D0D;
+    color: white;
 }
-h1, h2{
-    font-family: 'Raleway', sans-serif;
+
+h1,
+h2,
+h3 {
+    font-family: "Raleway", sans-serif;
+    font-weight: 600;
+}
+
+header {
+    background: #262626;
+    padding: 1em;
+    align-items: center;
+}
+
+nav>ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    gap: 1em;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+p {
+    text-wrap: pretty;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    padding: 1em;
+}
+
+.sidebar:has(ul) {
+    display: none;
+}
+
+section {
+    background-color: #262626;
+    padding: 1em;
+}
+
+section img {
+    max-width: 100%;
+    height: auto;
+}
+
+.left-float {
+    float: left;
+    margin: 0 1em 1em 0;
+}
+
+.sidebar {
+    background-color: #262626;
+    padding: 1em;
+}
+
+.sidebar ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding: 0;
+    gap:2em;
+}
+
+dl {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+
+dd {
+    margin: 0 0 1em 1em;
+}
+
+table {
+    width: 100%;
+    text-align: left;
+}
+
+table td {
+    padding: 0.5em 0;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+}
+
+@media (min-width: 1024px) {
+    header {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    nav>ul {
+        display: flex;
+        flex-direction: row;
+        list-style: none;
+        gap: 1em;
+    }
+
+    main {
+        flex-direction: row;
+    }
+
+    section {
+        flex: 2;
+    }
+
+    section img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .left-float {
+        float: left;
+        margin: 0 1em 1em 0;
+    }
+
+    .sidebar:has(ul) {
+        display: block;
+    }
+
+    .sidebar {
+        flex: 1;
+    }
 }
